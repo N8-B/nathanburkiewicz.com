@@ -1,0 +1,71 @@
+// PROJECT INDEX-------------
+.project-cards
+  +span-columns(9)
+  +media($tablet)
+    +fill-parent
+
+  .project-card
+    border: 1px solid $light-gray
+    margin: 0 0 2em 0
+    +span-columns(3 of 9)
+    +omega(3n)
+    +media($tablet)
+      +span-columns(4)
+
+  .project-card-image
+    img
+      width: 100%
+  
+  .project-card-details
+    padding: 0.5em
+    font-size: $base-font-size * 1
+    font-family: $heading-font-family
+    color: $medium-gray
+    &:hover
+      color: $medium-gray
+    .project-card-header
+
+      margin: 0 0 0 0
+      color: $dark-gray
+    .project-card-description
+      font-size: $base-font-size * 0.9    
+
+.greyscale-filter
+  +filter(opacity(50%))
+  +transition-property(all)
+  +transition-duration(400ms)
+  +transition-timing-function(ease-in)
+  &:hover
+    +filter(opacity(100%))
+    
+  
+
+// CONTENT-------------------
+.project-content-section
+  +outer-container
+
+.project-content-sidebar
+  +span-columns(3)
+  +media($tablet)
+    +span-columns(4)
+  +media($tablet)
+    margin-bottom: 3.25em
+
+.project-content-body
+  +span-columns(9)
+  +omega()
+  +media($tablet)
+    +span-columns(4)
+  h3
+    font-size: $base-font-size * 1.35
+    margin: 1em 0 0 0
+    &:first-child
+      margin-top: 0.9em
+  a
+    font-weight: 700
+    font-family: $base-font-family
+    text-decoration: none
+    border-bottom: none
+    color: $medium-blue
+    &:hover
+      color: $action-color

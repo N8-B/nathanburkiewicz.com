@@ -1,0 +1,19 @@
+<% for(slug in public.articles._data) { %>
+  <% if(slug != "index") { %>
+    <% var article = public.articles._data[slug] %>
+    <% if(article.published !== false) { %>
+      <% if(typeof article.tags != "undefined") { %>
+        <div class="article-tags">
+          <% article.tags.forEach(function(tag, i) { %>
+            <% var tagsLength = article.tags.length %>
+            <% if(i === (tagsLength - 1)) { %>
+              <span><%= tag %><span>
+            <% } else { %>
+              <span><%= tag %>, <span>
+            <% } %>
+          <% }) %>
+        </div>
+      <% } %>
+    <% } %>
+  <% } %>
+<% } %>

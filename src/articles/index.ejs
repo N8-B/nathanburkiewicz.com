@@ -1,0 +1,40 @@
+<section class="content-section">
+  <aside class="content-sidebar">
+    <figure>
+      <img src="/images/home/profile-front-smile.jpg" alt="Nathan Burkiewicz">
+      <figcaption>"Good! Now, that wasn't so hard, was it?"</figcaption>
+    </figure>
+    <hr />
+    <%- partial("../_shared/_contact") %>
+  </aside>
+  <article class="content-body">
+    <% for(slug in public.articles._data) { %>
+      <% if(slug != "index") { %>
+        <% var article = public.articles._data[slug] %>
+        <% if(article.published !== false) { %>
+          <a href="/articles/<%- slug %>" class="article-link">
+            <ul class="article-link-info">
+              <li class="article-link-title"><%- article.title %> </li>
+              <li class="article-link-date"><%- article.date %></li>
+              <% if(typeof article.tagline != "undefined") { %>
+              <li class="article-link-tagline"><%- article.tagline %></li>
+              <% } %>
+              <% if(typeof article.tags != "undefined") { %>
+              <li class="article-link-tags">
+                <% article.tags.forEach(function(tag, i) { %>
+                  <% var tagsLength = article.tags.length %>
+                  <% if(i === (tagsLength - 1)) { %>
+                    <span><%= tag %><span>
+                  <% } else { %>
+                    <span><%= tag %>, <span>
+                  <% } %>
+                <% }) %>
+              </li>
+              <% } %>
+            </ul>
+          </a>
+        <% } %>
+      <% } %>
+    <% } %>
+  </article>
+</section>

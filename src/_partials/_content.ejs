@@ -1,0 +1,51 @@
+<% if(typeof hero != "undefined" && hero) { %>
+<figure class="hero-image">
+  <img src="/images/articles/<%- current.source %>/hero.jpg" title="<%- title %>" />
+  <% if(typeof heroCaption != "undefined" && heroCaption) { %>
+  <figcaption><%- heroCaption %></figcaption>
+  <% } %>
+</figure>
+<% } %>
+
+<section class="content-section">
+  <% if(current.path[0] == "projects") { %>
+  <div class="project-image-link">
+    <% if(typeof link != "undefined") { %>
+      <a href="<%- link %>">
+    <% } %>
+      <img class="project-image" src="/images/projects/<%- current.source %>/hero.jpg" />
+    <% if(typeof link != "undefined") { %>
+      </a>
+    <% } %>
+  </div>
+  <div class="project-content">
+      <%- yield %>
+      <% if(typeof link != "undefined") { %>
+        <a class="project-link" href="<%- link %>"><span class="icon">link</span> View the project</a>
+      <% } %>
+  </div>
+</section>
+  <% } else { %>
+<div class="article-header">
+  <h1 class="article-title"><%- title %></h1>
+  <% if(typeof tagline != "undefined") { %>
+  <p class="article-tagline"><%- tagline %></p>
+  <% } %>
+  <% if(typeof tags != "undefined" && tags) { %>
+    <%- partial("../_partials/_articleTags") %>
+  <% } %>
+
+</div>
+<section class="article-content-section">
+  <aside class="article-content-sidebar">
+    <div class="text-center">
+      <hr/>
+      <%- partial("../_shared/_contact") %>
+      <hr/>
+    </div>
+  </aside>
+  <article class="article-content-body">
+    <%- yield %>
+  </article>
+  <% } %>
+</section>

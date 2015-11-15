@@ -1,0 +1,30 @@
+<section class="project-content-section">
+  <aside class="project-content-sidebar">
+    <figure class="sidebar-image">
+      <img src="/images/home/profile-front.jpg" alt="Nathan Burkiewicz">
+      <figcaption>"OK, that's a little better. How about a smile?"</figcaption>
+    </figure>
+    <hr />
+    <div><%- partial("../_shared/_contact") %></div>
+  </aside>
+  <article class="project-cards">
+    <% for(slug in public.projects._data) { %>
+      <% if(slug != "index") { %>
+        <% var project = public.projects._data[slug] %>
+        <% if(project.published !== false) { %>
+          <div class="project-card">
+            <a href="/projects/<%- slug %>" class="project">
+              <div class="card-image">
+                <img class="greyscale-filter" src="/images/projects/<%- slug %>/thumb.jpg" title="<%- project.title %>">
+              </div>
+              <div class="project-card-details">
+                <h4 class="project-card-header"><%- project.title %></h4>
+                <p class="project-card-description"><%- project.tagline %></p>
+              </div>
+            </a>
+          </div>
+        <% } %>
+      <% } %>
+    <% } %>
+  </article>
+</section>

@@ -1,17 +1,32 @@
 <html>
   <head>
-    <title>Nathan Burkiewicz</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title><%- title %> | <%- siteTitle %></title>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="https://use.typekit.net/akm7waf.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
     <div class="container">
-      <%- yield %>
-      <footer>
-      <p>Wow, that's quite a long url! Yeah, it's my name and the domain was available, so there you go.<p>
-      <p>As you can see, not much is going on here. But that will change shortly. I'm currently working on adding content and styling the site.</p>
-      <p>If you want to get in touch, you can always hit me up at <a href="http://twitter.com/n8bn8">@n8bn8</a> in Twitterland.</p>
-      <p>Stay cool.</p>
-    </footer>
+      <%- partial("_partials/_header") %>
+
+      <% if(current.published !== false) { %>
+        <% var content = (current.path[0] == "projects" || current.path[0] == "articles") && current.path[1] != "index" %>
+        <% if(content) { %>
+          <%- partial("_partials/_content") %>
+        <% } else { %>
+          <%- yield %>
+        <% } %>
+      <% } %>
+
+      <%- partial("_partials/_footer") %>
     </div>
+
+    <!-- Le JavaScripts //-->
+    <script src="/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="/js/prism.js"></script>
+    <script src="/js/site.js" type="text/javascript"></script>
   </body>
 </html>

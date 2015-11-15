@@ -1,0 +1,30 @@
+.contact-wrapper
+  margin-bottom: -10px
+
+  .contact-email
+    font-family: $heading-font-family
+    font-size: $base-font-size * 0.9
+    color: $light-gray
+    margin-bottom: 2em
+    +transition-property(color)
+    +transition-duration(400ms)
+    +transition-timing-function(ease-in)
+    &:hover
+      color: $action-color
+
+.contact-icon
+  font-size: $base-font-size * 1.15
+
+.contact-list
+  +horizontal-list
+  li
+    margin: 0 15px 0 0
+  a
+    border-bottom: none
+    text-decoration: none
+    color: $light-gray
+    +transition-property(color)
+    +transition-duration(400ms)
+    +transition-timing-function(ease-in)
+    &:hover
+      color: $action-color

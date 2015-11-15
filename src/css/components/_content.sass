@@ -1,0 +1,28 @@
+.content-section
+  margin-top: -14px
+
+.content-sidebar
+  +span-columns(3)
+  +media($tablet)
+    +span-columns(4)
+  +media($tablet)
+    margin-bottom: 3.25em
+
+.content-body
+  +span-columns(9)
+  +omega()
+  +media($tablet)
+    +span-columns(4)
+  h3
+    font-size: $base-font-size * 1.35
+    margin: 1em 0 0 0
+    &:first-child
+      margin-top: 0
+  a
+    font-weight: 700
+    font-family: $base-font-family
+    text-decoration: none
+    border-bottom: none
+    color: $medium-blue
+    &:hover
+      color: $action-color

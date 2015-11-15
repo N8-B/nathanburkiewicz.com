@@ -1,0 +1,22 @@
+{
+  "index": {
+    "title": "Home",
+    "description": "Home page description goes here."
+  },
+  "about": {
+    "title": "About",
+    "description": "About page description goes here."
+  },
+  "articles": {
+    "title": "Articles",
+    "description": "Articles page description goes here."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Projects page description goes here."
+  },
+  "404": {
+    "title": "404",
+    "description": "404 page description goes here."
+  }
+}

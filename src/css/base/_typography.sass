@@ -1,0 +1,76 @@
+body
+  color: $base-font-color
+  font-family: $base-font-family
+  font-feature-settings: "kern", "liga", "pnum"
+  font-size: $base-font-size
+  line-height: $base-line-height
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $heading-font-family
+  font-size: $base-font-size
+  line-height: $heading-line-height
+  margin: 0 0 $small-spacing
+
+p
+  margin: 0 0 $small-spacing
+  font-size: $base-font-size * 1.125
+
++selection
+  background: $medium-blue
+  color: $base-background-color
+
+// SMARTER UNDERLINES MIXIN--------------------------------
+$selectionColor: $medium-blue
+
+=linkUnderlines($backgroundColor, $color, $hoverColor)
+  color: $color
+  text-decoration: none
+  text-shadow: .03em 0 $backgroundColor, -.03em 0 $backgroundColor, 0 .03em $backgroundColor, 0 -.03em $backgroundColor, .06em 0 $backgroundColor, -.06em 0 $backgroundColor, .09em 0 $backgroundColor, -.09em 0 $backgroundColor, .12em 0 $backgroundColor, -.12em 0 $backgroundColor, .15em 0 $backgroundColor, -.15em 0 $backgroundColor
+  background-image: linear-gradient($backgroundColor, $backgroundColor), linear-gradient($backgroundColor, $backgroundColor), linear-gradient($color, $color)
+  background-size: .05em .0625em, .05em .0625em, .0625em .0625em
+  background-repeat: no-repeat, no-repeat, repeat-x
+  background-position: 0% 90%, 100% 90%, 0% 90%
+  transition: all 400ms ease-in
+  -webkit-transition: all 400ms ease-in
+  -moz-transition: all 400ms ease-in
+  -o-transition: all 400ms ease-in
+
+  &::selection
+    text-shadow: .03em 0 $selectionColor, -.03em 0 $selectionColor, 0 .03em $selectionColor, 0 -.03em $selectionColor, .06em 0 $selectionColor, -.06em 0 $selectionColor, .09em 0 $selectionColor, -.09em 0 $selectionColor, .12em 0 $selectionColor, -.12em 0 $selectionColor, .15em 0 $selectionColor, -.15em 0 $selectionColor, -.15em 0 $selectionColor
+    background: $selectionColor
+
+  &::-moz-selection
+    text-shadow: .03em 0 $selectionColor, -.03em 0 $selectionColor, 0 .03em $selectionColor, 0 -.03em $selectionColor, .06em 0 $selectionColor, -.06em 0 $selectionColor, .09em 0 $selectionColor, -.09em 0 $selectionColor, .12em 0 $selectionColor, -.12em 0 $selectionColor, .15em 0 $selectionColor, -.15em 0 $selectionColor, -.15em 0 $selectionColor
+    background: $selectionColor
+
+  &:before, &:after, *, *:before, *:after
+    text-shadow: none
+
+  &:visited
+    color: $color
+
+  &:hover
+    background-image: linear-gradient($backgroundColor, $backgroundColor), linear-gradient($backgroundColor, $backgroundColor), linear-gradient($hoverColor, $hoverColor)
+
+
+a:not(.without-underline)
+  @include linkUnderlines($base-background-color, $medium-blue, $action-color)
+  transition: all $base-duration $base-timing
+  font-family: $base-font-family
+
+hr
+  border-bottom: $base-border
+  border-left: 0
+  border-right: 0
+  border-top: 0
+  margin: $base-spacing 0
+
+img,
+picture
+  margin: 0
+  max-width: 100%

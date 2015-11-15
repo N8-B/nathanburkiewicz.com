@@ -1,0 +1,56 @@
+// Bitters 1.1.0
+// http://bitters.bourbon.io
+// Copyright 2013-2015 thoughtbot, inc.
+// MIT License
+
+@import "variables"
+
+// Neat Settings -- uncomment if using Neat -- must be imported before Neat
+@import "grid-settings"
+
+@import "buttons"
+@import "forms"
+@import "lists"
+@import "tables"
+@import "typography"
+
+html, body
+  height: 100vh
+
+body
+  font-family: $base-font-family
+  // @include background (linear-gradient(-20deg, hsl(0, 50%, 98%) 0%, hsl(90, 50%, 97%) 40%, hsl(180, 50%, 96%) 80%) repeat scroll 0 0)
+  background: rgba(255, 255, 255, 1)
+  color: #37424A
+
+img
+  width: 100%
+  height: auto
+
+figure
+  margin: 0 0 20px 0
+
+figcaption
+  font-style: italic
+  text-align: left
+  padding-top: 5px
+  color: $medium-gray
+  font-size: $base-font-size * 0.925
+
+// Hide flash of unstyled text while webfonts load
+html
+  body
+    opacity: 1
+  &.wf-loading
+    body
+      opacity: 0
+
+h1
+  font-size: $base-font-size * 4
+  font-family: $heading-font-family
+  font-weight: 700
+
+.container
+  +outer-container
+  +pad (0 30px)
+  +margin (0 auto)
