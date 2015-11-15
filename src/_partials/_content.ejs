@@ -7,25 +7,38 @@
 </figure>
 <% } %>
 
-<section class="content-section">
+<section class="project-content-section">
   <% if(current.path[0] == "projects") { %>
-  <div class="project-image-link">
-    <% if(typeof link != "undefined") { %>
-      <a href="<%- link %>">
-    <% } %>
-      <img class="project-image" src="/images/projects/<%- current.source %>/hero.jpg" />
-    <% if(typeof link != "undefined") { %>
-      </a>
-    <% } %>
-  </div>
-  <div class="project-content">
-      <%- yield %>
+  <div class="project-content-image">
+    <div>
       <% if(typeof link != "undefined") { %>
-        <a class="project-link" href="<%- link %>"><span class="icon">link</span> View the project</a>
+        <a href="<%- link %>">
       <% } %>
+        <img src="/images/projects/<%- current.source %>/hero.jpg" />
+      <% if(typeof link != "undefined") { %>
+        </a>
+      <% } %>
+    </div>
+<!--    <a class="back-link" href="/projects">Return to Project Index</a>-->
+  </div>
+  <div class="project-content-body">
+    <div class="project-content-header">
+      <h3> <%- title %> </h3>
+      <p class="project-header-tagline"><%- tagline %></p>
+      <p class="project-header-date"><%- date %></p>
+      <p class="project-header-skills"><strong>Skills:</strong> <%- skills %></p>
+    </div>
+    <hr>
+    <%- yield %>
+    <% if(typeof link != "undefined") { %>
+      <a class="button project-content-link without-underline" href="<%- link %>"><span class="icon-link"></span> Link to project</a>
+    <% } %>
+    <br >
+    <a class="button project-content-link without-underline" href="/projects"><span class="icon-arrow-left-circle"></span> Project Index</a>
   </div>
 </section>
   <% } else { %>
+
 <div class="article-header">
   <h1 class="article-title"><%- title %></h1>
   <% if(typeof tagline != "undefined") { %>
@@ -34,7 +47,6 @@
   <% if(typeof tags != "undefined" && tags) { %>
     <%- partial("../_partials/_articleTags") %>
   <% } %>
-
 </div>
 <section class="article-content-section">
   <aside class="article-content-sidebar">

@@ -1,6 +1,6 @@
 <section class="project-content-section">
   <aside class="project-content-sidebar">
-    <figure class="sidebar-image">
+    <figure class="sidebar-image hide-mobile">
       <img src="/images/home/profile-front.jpg" alt="Nathan Burkiewicz">
       <figcaption>"OK, that's a little better. How about a smile?"</figcaption>
     </figure>
@@ -14,7 +14,7 @@
         <% if(project.published !== false) { %>
           <div class="project-card">
             <a href="/projects/<%- slug %>" class="project">
-              <div class="card-image">
+              <div class="project-card-image">
                 <img class="greyscale-filter" src="/images/projects/<%- slug %>/thumb.jpg" title="<%- project.title %>">
               </div>
               <div class="project-card-details">
