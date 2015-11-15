@@ -33,7 +33,7 @@ gulp.task('serve', function () {
     gulp.watch(["src/**/*.ejs", "src/**/*.json", "src/**/*.md"], function () {
       reload();
     });
-  });
+  })
 });
 
 /**
