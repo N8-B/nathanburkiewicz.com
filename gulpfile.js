@@ -1,10 +1,10 @@
 var gulp        = require('gulp');
-var harp        = require('harp')
+var harp        = require('harp');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var deploy      = require('gulp-gh-pages');
 var cp          = require('child_process');
-var clean       = require('gulp-clean');
+var clean       = require('gulp-rimraf');
 
 /**
  * Serve the Harp Site
@@ -17,7 +17,7 @@ gulp.task('serve', function () {
       proxy: "localhost:9000",
       open: false,
       /* Hide the notification. It gets annoying */
-      notify: {
+       notify: {
         styles: ['opacity: 0', 'position: absolute']
       }
     });
@@ -33,7 +33,7 @@ gulp.task('serve', function () {
     gulp.watch(["src/**/*.ejs", "src/**/*.json", "src/**/*.md"], function () {
       reload();
     });
-  })
+  });
 });
 
 /**
