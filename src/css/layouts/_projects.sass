@@ -1,10 +1,13 @@
 // PROJECT INDEX-------------
 .project-cards
+  img
+    border-radius: 0
   +span-columns(9)
   +media($tablet)
     +fill-parent
 
   .project-card
+    border-radius: 3px
     border: 1px solid $light-gray
     margin: 0 0 2em 0
     +span-columns(3 of 9)
@@ -105,6 +108,7 @@
         text-transform: uppercase
 
     .project-content-link
+      min-width: 13em
       margin-top: 3em
       font-size: $base-font-size * 0.8
       font-family: $heading-font-family
