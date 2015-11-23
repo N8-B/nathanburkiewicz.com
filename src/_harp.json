@@ -4,6 +4,9 @@
     "tagline": "Developer of the JavaScript kind, designer, husband and the occasional baker striving to be a decent human being and make rad stuff on the internets.",
     "name": "Nathan Burkiewicz",
     "email": "nathan.burkiewicz@gmail.com",
-    "url": "http://nathanburkiewicz.com"
+    "url": "http://nathanburkiewicz.com",
+    "service": {
+      "analytics": "UA-70511315-1"
+    }
   }
 }
