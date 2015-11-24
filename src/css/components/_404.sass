@@ -1,0 +1,21 @@
+.notfound-section
+  +span-columns(12)
+  +omega()
+  +media($tablet)
+    +span-columns(4)
+
+  .notfound-body
+    h1
+      font-size: $base-font-size * 3
+      text-align: center
+      margin-bottom: 0
+    h2
+      font-size: 1.5em
+      text-align: center
+    img
+      display: block
+      width: 54%
+      margin: 0 auto
+      margin-bottom: 3em
+      +media($tablet)
+        width: 100%
