@@ -47,10 +47,10 @@ gulp.task('serve', function () {
  /**
   * Clean dist folder before deploying to gh-pages
   */
-  gulp.task('clean', function () {
-    return gulp.src('dist', {read: false})
-      .pipe(clean());
-  });
+gulp.task('clean', function () {
+  return gulp.src('dist', {read: false})
+    .pipe(clean());
+});
 
 /**
  * Push build to gh-pages

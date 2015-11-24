@@ -2,13 +2,13 @@
   "index": {
     "title": "Articles"
   },
-  "a-colophon-of-sorts": {
-    "title": "A Colophon of Sorts",
-    "tagline": "Or how I built this site.",
-    "tags": ["Harp.js", "Gulp", "Sass", "Bourbon", "Neat"],
+  "harp-gulp-sass": {
+    "title": "Harp, Gulp and Sass",
+    "tagline": "Or how this site was built.",
+    "tags": ["Harp", "Gulp", "Sass", "Bourbon", "Neat"],
     "date": "12 November 2015",
     "hero": true,
-    "heroCaption": "Photo by Carmine De Fazio - unsplash.com/carminu",
+    "heroCaption": "",
     "published": true
   }
 }
