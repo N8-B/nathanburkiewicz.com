@@ -1,0 +1,124 @@
+// CV HEADER
+.cv-header
+  font-family: $heading-font-family
+  text-align: center
+  margin-bottom: 2em
+  +span-columns(12)
+  +omega()
+  +media($tablet)
+    +span-columns(4)
+  h1
+    text-transform: uppercase
+    font-size: $base-font-size * 2.5
+    margin-bottom: 0
+    +media($tablet)
+      line-height: 0.9em
+  .cv-header-details
+    font-family: $base-font-family
+    +media($mobile)
+      font-size: $base-font-size * 1
+    .cv-header-email
+      margin-right: 0.5em
+    .cv-header-phone
+      margin-left: 0.5em
+      +media($mobile)
+        margin-bottom: -1.25em
+    span
+      +media($mobile)
+        display: block
+        &.hide-me
+          display: none
+
+  .cv-header-links
+    margin: 1em 0 2em 0
+    a
+      font-weight: 700
+      font-family: $heading-font-family
+      text-decoration: none
+      border-bottom: none
+      color: $medium-blue
+      &:hover
+        color: $action-color
+
+// CV BODY
+.cv-section
+  margin-bottom: 3em
+  +span-columns(12)
+  +omega()
+  h3
+    font-family: $heading-font-family
+  .cv-article
+    &:nth-of-type(4n)
+      border-bottom: none
+
+  .cv-aside
+    h2
+      font-size: $base-font-size * 1.75
+      text-transform: uppercase
+      color: $medium-gray
+    +span-columns(3)
+    +media($tablet)
+      +span-columns(4)
+
+  .cv-article
+    padding: 0 0 2em 0
+    border-bottom: 1px solid $light-gray
+    +span-columns(9)
+    +media($tablet)
+      +span-columns(4)
+    .cv-article-work-item
+      p
+        margin-bottom: 2em
+    .cv-article-work-details
+      margin-bottom: 0.5em
+      .cv-article-work-place
+        font-weight: 700
+        font-size: $base-font-size * 1.2
+        margin-bottom: 0
+        text-transform: uppercase
+      .cv-article-work-position
+        text-transform: uppercase
+        font-size: $base-font-size * 0.8
+        font-family: $heading-font-family
+        color: $medium-gray
+    .cv-skills-sections
+      +span-columns(12)
+      +media($tablet)
+        +span-columns(4)
+      h4
+        text-transform: uppercase
+      ul
+        list-style-type: disc
+        list-style-position: inside
+
+      .cv-skills-section__full-width
+        +span-columns(12)
+        +omega()
+        margin-bottom: 2em
+        ul
+          list-style-type: disc
+          list-style-position: inside
+        div
+          +span-columns(4 of 12)
+          +media($tablet)
+            +span-columns(4)
+            &:nth-child(odd)
+              margin: 1em 0
+
+      .cv-skills-section
+        margin-bottom: 2em
+        +span-columns(4 of 12)
+        +media($tablet)
+          +span-columns(4)
+
+    .cv-article-education-item
+      margin-bottom: 2em
+
+.cv-section-last
+  .cv-article
+    border-bottom: none
+
+
+.spacer
+  color: $medium-gray
+  margin: 0 0.25em

@@ -6,6 +6,8 @@
     border-bottom: none
     font-size: $base-font-size * 1.2
     font-weight: 700
+    +media($mobile)
+      font-size: $base-font-size * 1
 
 .header-logo
   +span-columns(3)
@@ -31,6 +33,10 @@
     text-align: left
     li
       margin-right: 30px
+  +media($mobile)
+    li
+      margin-right: 15px
+
   a
     text-decoration: none
     color: $light-gray
