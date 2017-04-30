@@ -1,7 +1,7 @@
 ### Why Harp?
 When I began researching static-site generators, I was looking for something that was easy to set up, easy to modify and, most importantly, easy to update and deploy. There is a wide variety of options, but I boiled the list down to two: [Assemble](http://assemble.io/) and [Harp](http://harpjs.com/).
 
-While I'll definitely check out Assemble for uture projects, I ended up going with Harp as it seemed like a good fit for what I was trying to accomplish: a simple static site for my résumé, projects and articles that could be hosted on GitHub.
+While I'll definitely check out Assemble for future projects, I ended up going with Harp as it seemed like a good fit for what I was trying to accomplish: a simple static site for my résumé, projects and articles that could be hosted on GitHub.
 
 What sold me on Harp were its documentation and how easy it was to get a project up and running. Another nice feature is its built-in preprocessing of Markdown, EJS and Sass. With one command all your preprocessed files are compiled to HTML, CSS and JavaScript, ready to be hosted anywhere. Nice, very nice!
 
