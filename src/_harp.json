@@ -1,5 +1,8 @@
 {
   "globals": {
+    "title": "",
+    "date": "",
+    "skills": "",
     "siteTitle": "Nathan Burkiewicz",
     "tagline": "Developer of the JavaScript kind, designer, husband and the occasional baker striving to be a decent human being and make rad stuff on the internets.",
     "name": "Nathan Burkiewicz",
