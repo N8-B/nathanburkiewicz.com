@@ -2,46 +2,6 @@
   "index": {
     "title": "Projects"
   },
-  "twitchtv-project": {
-    "title": "Twitch.tv App",
-    "tagline": "Twitch.tv project built with React for Free Code Camp",
-    "link": "http://n8-b.github.io/twitch-api-project/",
-    "date": "2015",
-    "skills": "React, Webpack, CSS Modules",
-    "published": true
-  },
-  "pomodoro-timer": {
-    "title": "Pomodoro Timer",
-    "tagline": "Pomodoro timer built with React for Free Code Camp",
-    "link": "http://codepen.io/N8-B/full/bVRJLL/",
-    "date": "2015",
-    "skills": "React, HTML, CSS",
-    "published": true
-  },
-  "weather-app": {
-    "title": "Weather App",
-    "tagline": "Weather app built with React for Free Code Camp",
-    "link": "http://codepen.io/N8-B/full/PPmjpN/",
-    "date": "2015",
-    "skills": "React, HTML, CSS",
-    "published": true
-  },
-  "portfolio-redux": {
-    "title": "Portfolio Redux",
-    "tagline": "Portfolio project for Free Code Camp",
-    "link": "http://codepen.io/N8-B/full/MagezW/",
-    "date": "2015",
-    "skills": "HTML, CSS, JavaScript",
-    "published": true
-  },
-  "bite-sized-bourdain": {
-    "title": "Bite-sized Bourdain",
-    "tagline": "Random Quotes from Anthony Bourdain",
-    "link": "http://codepen.io/N8-B/full/EjMrNy/",
-    "date": "2015",
-    "skills": "HTML, CSS, JavaScript",
-    "published": true
-  },
   "yes-magazine": {
     "title": "Yes Magazine",
     "tagline": "WordPress site design for Yes magazine",
