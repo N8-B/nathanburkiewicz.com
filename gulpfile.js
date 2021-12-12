@@ -40,7 +40,7 @@ gulp.task('serve', function () {
  * Build the Harp Site
  */
  gulp.task('build', ['clean'], function (done) {
-   cp.exec('harp compile src dist', {stdio: 'inherit'})
+   cp.exec('harp ./src ./dist', {stdio: 'inherit'})
      .on('close', done);
  });
 
@@ -48,7 +48,7 @@ gulp.task('serve', function () {
   * Clean dist folder before deploying to gh-pages
   */
 gulp.task('clean', function () {
-  return gulp.src('dist', {read: false})
+  return gulp.src('./dist', {read: false})
     .pipe(clean());
 });
 
